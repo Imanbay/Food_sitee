@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт дня</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="#recipes">Рецепты</a></li>
+                    <li class="menu-item"><a href="#about">О нас</a></li>
+                    <li class="menu-item"><a href="#contact">Контакты</a></li>
+                    <li class="menu-item"><a href="#" id="admin-login-link">Вход для админа</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main">
+        <div class="container">
+            <h1 class="main-title">Любимые рецепты в нашей стране</h1>
+            <p class="main-text">
+                Каждый рецепт здесь — это диалог с традицией. Тут живёт память о бабушкиных пирогах, треск дров в русской печи,
+                шелест страниц старинной кулинарной книги. Мы соединяем исконные техники с дыханием современности:
+                томлёная каша встречается с авокадо, борщ шепчет на языке молекулярной гастрономии.
+            </p>
+        </div>
+    </section>
+
+        <!-- Recipe of the Day -->
+        <section class="recipe-of-the-day">
+            <div class="container">
+                <h2 class="common-title">Рецепт дня</h2>
+                <div id="recipe-of-the-day" class="recipe-item">
+                    <!-- Рецепт дня будет загружаться динамически -->
+                </div>
+            </div>
+        </section>
+    
+        <div id="recipe-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="recipe-modal-title"></h2>
+                <p id="recipe-modal-description"></p>
+                <h3>Инструкция по приготовлению:</h3>
+                <p id="recipe-modal-instructions"></p>
+            </div>
+        </div>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="recipes">
+        <div class="container">
+            <h2 class="common-title">Наши рецепты</h2>
+            <div id="recipe-list" class="recipe-list">
+                <!-- Рецепты будут загружаться динамически -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Admin Panel -->
+    <section id="admin-panel" class="admin-panel" style="display: none;">
+        <div class="container">
+            <h2 class="common-title">Админ панель</h2>
+            <form id="add-recipe-form">
+                <input type="text" placeholder="Название рецепта" required>
+                <textarea placeholder="Описание рецепта" required></textarea>
+                <textarea placeholder="Инструкция по приготовлению" required></textarea>
+                <button type="submit" class="button violet-button">Добавить рецепт</button>
+            </form>
+            <div id="admin-recipe-list" class="recipe-list">
+                <!-- Список рецептов в админке будет загружаться динамически -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="common-title">О нас</h2>
+            <p>
+                Мы с гордостью представляем наши рецепты, которые собираем и улучшаем с 1995 года, используя только лучшие ингредиенты.
+                Погрузитесь в мир изысканных блюд, приготовленных с применением передовых технологий, и насладитесь их неповторимым вкусом.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="common-title">Поделиться с рецептом</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="Название" required>
+                <input type="email" placeholder="Email для связи с вами" required>
+                <textarea placeholder="Инструкция для приготовления" required></textarea>
+                <button type="submit" class="button violet-button">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Модальное окно для входа администратора -->
+<div id="admin-login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Вход для администратора</h2>
+        <form id="admin-login-form">
+            <input type="text" placeholder="Логин" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit" class="button violet-button">Войти</button>
+        </form>
+    </div>
+</div>
+
+<!-- Админ панель (скрыта по умолчанию) -->
+<section id="admin-panel" class="admin-panel" style="display: none;">
+    <div class="container">
+        <h2 class="common-title">Админ панель</h2>
+        <form id="add-recipe-form">
+            <input type="text" placeholder="Название рецепта" required>
+            <textarea placeholder="Описание рецепта" required></textarea>
+            <textarea placeholder="Инструкция по приготовлению" required></textarea>
+            <button type="submit" class="button violet-button">Добавить рецепт</button>
+        </form>
+        <div id="admin-recipe-list" class="recipe-list">
+            <!-- Список рецептов в админке будет загружаться динамически -->
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="rights">«Все права защищены»</p>
+             <a class="rights" href="https://vk.com/" target="_blank">VK</a>
+             <a class="rights" href="https://web.telegram.org/k/" target="_blank">TG</a>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>

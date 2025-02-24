@@ -1,0 +1,282 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5243F4;
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопки */
+.button {
+    background-color: white;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: #5243F4;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s ease;
+}
+
+.violet-button {
+    background-color: #5243F4;
+    color: white;
+}
+
+.button.violet-button:hover {
+    background-color: #3b2cd8;
+}
+
+.button:hover {
+    background-color: #eeeeee;
+}
+
+/* Заголовки */
+.common-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Header */
+.header {
+    padding: 40px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.menu-item a {
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu-item a:hover {
+    border-bottom: 2px solid white;
+    transition-duration: 4s;
+}
+
+/* Главный раздел */
+.main {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 90px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+/* Раздел рецептов */
+.recipes {
+    padding: 100px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.recipe-item {
+    background-color: rgb(37, 36, 36);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+    
+}
+
+.recipe-item:hover {
+    transform: translateY(-10px);
+}
+
+.recipe-item h3 {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.recipe-item p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+
+/* О нас */
+.about {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Контакты */
+.contact {
+    padding: 100px 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #5243F4;
+}
+
+.contact-form button {
+    align-self: flex-end;
+}
+
+/* Админ панель */
+.admin-panel {
+    padding: 100px 0;
+    display: none; /* Скрыта по умолчанию */
+}
+
+.admin-panel form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgb(13, 15, 55);
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Стили для крестика */
+.modal-content .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.modal-content .close:hover {
+    color: #5243F4; /* Изменяем цвет при наведении */
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.rights {
+    font-size: 14px;
+    color: #fff;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* Стили для блока "Рецепт дня" */
+#recipe-of-the-day {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#recipe-of-the-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-of-the-day-item {
+    background-color: rgb(37, 36, 36);
+    padding: 20px;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+}
